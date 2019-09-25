@@ -1,0 +1,21 @@
+<h2>Animals - New</h2>
+<%= form_with scope: :animal, url: animals_path, local: true do |form| %>
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+   
+    <p>
+      <%= form.label :image %><br>
+      <%= form.file_field :image %>
+    </p>
+   
+    <p>
+      <%= form.label :credit %><br>
+      <%= form.text_area :credit %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
