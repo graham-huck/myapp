@@ -1,6 +1,6 @@
 class Animal < ApplicationRecord
-    has_one_attached :image
+    has_many_attached :images
     validates :name, presence: true
-    validates :image, presence: true
+    validates :images, presence: true
     validates :credit, presence: true
 end

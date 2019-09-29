@@ -3,12 +3,16 @@
   <span>Name:</span>
   <%= @animal.name %>
 </p>
-
-<p>
-  <span>Image:</span>
-  <%= image_tag(url_for(@animal.image), width: '500') %>
-</p>
-
+<% if @animal.images.any? %>
+  <div>
+    <span>
+      <%= pluralize(@animal.images.count, "Image") %>:
+    </span>
+      <% @animal.images.each do |img| %>
+        <div><%= image_tag(url_for(img), width: '500') %></div>
+      <% end %>
+  </div>
+<% end %>
 <p>
   <span>Credit:</span>
   <%= @animal.credit.html_safe %>
