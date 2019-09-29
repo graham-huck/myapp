@@ -21,9 +21,9 @@
 <h3>Manage Animals</h3>
 <div>
     <div>
-        <a href="/animals/index">View All Animals</a>
+        <%= link_to "View Animals", controller: "animals" %>
     </div>
     <div>
-        <a href="/animals/new">Add New Animal</a>
+        <%= link_to 'Create New Animal', new_animal_path %>
     </div>
 </div>
